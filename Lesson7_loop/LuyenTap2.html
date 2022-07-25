@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện Tập 2</title>
+</head>
+<body>
+<button type="button" onclick="Bai2()">Bài 1</button>
+<button type="button" onclick="Bai3()">Bài 2</button>
+<button type="button" onclick="Bai4()">Bài 3</button>
+
+<script>
+    function Bai2(){
+    let so = Number(prompt("Nhập một số để tính giai thừa"))
+    let giai_thua = 1
+    if(so == 0 || so == 1){
+        giai_thua = 1;
+    }else if(so<0){
+        alert("Error!")
+    }else{
+        for (let i=1;i<=so;i++) {
+            giai_thua = giai_thua*i
+        }
+    }
+    document.write("Giai thừa của "+so+" = "+giai_thua)
+    }
+    function Bai3() {
+        for (let i = 1; i <= 5; i++) {
+            for (let j = 1; j <= i; j++) {
+                document.write('*')
+            }
+            document.write('<br /> ')
+        }
+    }
+    function Bai4() {
+        for (let i = 5; i > 0; i++) {
+            for (let j = 1; j < 1; j++) {
+                document.write('*')
+            }
+            document.write('<br />')
+        }
+    }
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ứng dụng máy tính</title>
+</head>
+<body>
+<form action="#" method="post" >
+  <b>Nhập phép tính</b>
+  <input type="text" name="so1" id="so1" >
+  <input type="text" name="so2" id="so2">
+  <br><br>
+  <input type="submit" name="1" id="1" value="Phép +" onclick="hamcong()" >
+  <input type="submit" name="2" id="2" value="Phép -" onclick="hamtru()"  >
+  <input type="submit" name="3"  value="Phép *"  onclick="hamnhan()" >
+  <input type="submit" name="4"  value="Phép /"  onclick="hamchia()" >
+  <br><br>
+  <b>Kết quả </b> <input type="text" name="kq" id="kq" value="0" disabled="disabled">
+</form>
+<script>
+  let so1, so2, ketqua
+  so1 = document.getElementById("so1")
+  so2 = document.getElementById("so2")
+  function hamcong() {
+    ketqua = eval(so1.value)+ eval(so2.value)
+    alert(ketqua)
+    document.getElementById("kq").innerHTML = ketqua
+  }
+  function hamtru() {
+    ketqua = eval(so1.value)- eval(so2.value)
+    alert(ketqua)
+    document.getElementById("kq").innerHTML = ketqua
+  }
+  function hamnhan() {
+    ketqua = eval(so1.value)* eval(so2.value)
+    alert(ketqua)
+    document.getElementById("ketqua").innerHTML = ketqua
+  }
+  function hamchia() {
+    ketqua = eval(so1.value)/ eval(so2.value)
+    alert(ketqua)
+    document.getElementById("ketqua").innerHTML = ketqua.toFixed(2)
+  }
+</script>
+</body>
+</html>

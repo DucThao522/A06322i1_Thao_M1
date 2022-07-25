@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <h3>Biến và kiểu dữ liệu</h3>
+</head>
+<body>
+<button type="button" onclick="Bai1()">Bài 1</button> Viết chương trình nhập điểm của một sinh viên cho các môn: Vật lý, Hóa học, và Sinh học. Sau đó hiển thị điểm trung bình và tổng của những điểm này.</br>
+<button type="button" onclick="Bai2()">Bài 2</button> Viết chương trình nhập một giá trị là độ 0C (Celsius) và chuyển nó sang độ 0F (Fahrenheit). [Hướng dẫn: C/5 = (F-32)/9]</br>
+<button type="button" onclick="Bai3()">Bài 3</button> Tính chu vi và diện tích hình tròn
+<script>
+    function Bai3() {
+        let R = parseInt(prompt(" Mời Bạn Nhập Bán Kính"));
+        const Pi = 3.14;
+        let chuVi, dienTich;
+        chuVi = 2 * R * Pi
+        dienTich = R * R * Pi;
+        alert("Chu Vi Hình Tròn là : " + chuVi);
+        alert("Diện Tích Hình Tròn là : " + dienTich);
+
+    }
+    function Bai2() {
+        let C = parseInt(prompt("Mời Bạn Nhập Nhiệt Độ"));
+        let F = (9 * C) / 5 + 32
+        alert("Nhiệt Độ F là :" + F)
+    }
+    function Bai1(){
+        let Hoa = parseInt(prompt("Nhập Điểm Môn Hoá"));
+        let Sinh = parseInt(prompt("Nhập Điểm Môn Sinh"));
+        let Ly = parseInt(prompt("Nhập Điểm Môn Lý"));
+        let Tongdiemcacmon = (Hoa + Sinh + Ly);
+        alert("Tổng điểm là: " + Tongdiemcacmon)
+        let Diemtrungbinhla = (Hoa + Sinh + Ly) / 3;
+        alert("Điểm Trung Bình là: " + Diemtrungbinhla)
+    }
+
+
+</script>
+
+</body>
+</html>

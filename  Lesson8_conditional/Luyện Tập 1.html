@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện Tập 1</title>
+    <h2>
+        Luyện Tập 1
+    </h2>
+</head>
+<body>
+<button type="button" onclick="Bai1()">Bài 1</button> Nhập vào hai số a và b, và kiểm tra xem a có chia hết cho b hay không?</br>
+<button type="button" onclick="Bai2()">Bài 2</button> Nhập tuổi và in ra kết quả nếu tuổi học sinh đó không đủ điều kiện vào học lớp 10</br>
+<button type="button" onclick="Bai3()">Bài 3</button>Nhập một số nguyên bất kỳ và in kết quả ra màn hình để nói cho người dùng biết số đó là lớn hay nhỏ hơn 0</br>
+<button type="button" onclick="Bai4()">Bài 4</button>Nhập 3 số nguyên và tìm giá trị lớn nhất của ba số nguyên đó</br>
+<button type="button" onclick="Bai5()">Bài 5</button>Xếp hạng học lực của học sinh dựa trên các điểm bài kiểm tra, điểm thi giữa kỳ, điểm thi cuối kỳ</br>
+<button type="button" onclick="Bai6()">Bài 6</button>Tính hoa hồng nhận được tuỳ theo mức doanh số bán hàng</br>
+<button type="button" onclick="Bai7()">Bài 7</button>Tính cước điện thoại cho một hộ gia đình với các thông số đã cho</br>
+
+<script>
+    function Bai1(){
+        let a = parseInt(prompt('Mời Bạn nhập số a :'))
+        let b = parseInt(prompt('Mời bạn nhâp số b:'))
+        if(a%b == 0){
+            alert('Số a chia hết cho b')
+        }else{
+            alert('Số a không chia hết cho b')
+        }
+    }
+    function Bai2(){
+        let age = parseInt(prompt('Mời Bạn Nhập Tuổi'))
+        if (age >= 16) {
+            alert('Bạn đủ tuổi vào lớp 10')
+        } else {
+            alert('Bạn chưa đủ tuổi vào lớp 10')
+        }
+    }
+    function Bai3(){
+        let number = parseInt(prompt('Enter any number'))
+        if (number >= 0) {
+            alert('This number bigger than 0')
+        } else {
+            alert('This number smaller than 0')
+        }
+    }
+    function Bai4(){
+        let a = prompt('Enter a number');
+        let b = prompt('Enter a number');
+        let c = prompt('Enter a number')
+        let max;
+        if (a>b&&a>c){
+            max=a;
+        }else {
+            if (b>c){
+                max =b;
+            }else {
+                max =c;
+            }
+        }
+        alert('The biggest number is :'+ max);
+    }
+    function Bai5(){
+        let a = +prompt('Nhập điểm kiểm tra :')
+        let b = +prompt('Nhập điểm thi giữa kỳ :')
+        let c = +prompt('Nhập điểm thi cuối kỳ')
+        let res = 0
+        res = (a+b+c)/3
+        if (res >= 9){
+            alert("Học sinh giỏi")
+        } else if(res>= 7){
+            alert("Học sinh khá")
+        }else if(res>=5){
+            alert("Học sinh trung bình")
+        }else if(res<3){
+            alert("Học lại")
+        }else{
+            alert("Học sinh yếu")
+        }
+    }
+    function Bai6(){
+        let hoahong = +prompt("Nhập % chiếu khấu hoa hồng");
+        let giaban = +prompt("Nhập giá trung bình 1 sản phẩm");
+        let soluong = +prompt("Nhập số lượng sản phẩm đã bán");
+        let tien = ((giaban*soluong)*hoahong)/100
+        alert("Bạn hương "+hoahong+"% phí và giá bán 1 sản phẩm = "+giaban+" VNĐ số lượng đã bán = "+soluong)
+        alert("Tổng tiền là "+(giaban*soluong)+" VNĐ Số tiền bạn được hưởng là "+tien+" VND")
+    }
+    function Bai7() {
+        let sodien = Number(prompt("Nhập số điện nhà bạn dùng"))
+        let tiendien =0
+        if(sodien <=50){
+            tiendien = 1484 * sodien
+        }else if(sodien<=100){
+            tiendien = (50*1484) + ((sodien-50)*1533)
+        }else if(sodien<=200){
+            tiendien = (50*1484) + (50*1533) + ((sodien-100)*1786)
+        }else if(sodien<=300){
+            tiendien = (50*1484) + (50*1533) + (100*1786) + ((sodien - 200)*2242)
+        }else if(sodien<=400){
+            tiendien = (50*1484) + (50*1533) + (100*1786) + (100*2242) + ((sodien -300)*2503)
+        }else{
+            tiendien = (50*1484) + (50*1533) + (100*1786) + (100*2242) + (100*2503) + ((sodien -400)*2583)
+        }
+        alert("Số điện nhà bạn hiện tại là "+ sodien)
+        alert("Số tiền điện là "+tiendien+" VNĐ")
+
+    }
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
+
